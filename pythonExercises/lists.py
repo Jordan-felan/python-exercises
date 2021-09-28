@@ -28,8 +28,16 @@ print(amazon_cart)
 
 #so we could save the sliced original list as a new variable if we wanted too
 
-new_cart = amazon_cart[0:3]
+# new_cart = amazon_cart
+# new_cart[0] = 'gum'
+# print(new_cart)
+# print(amazon_cart)
+# here in this example we will see that that how we set new_cart to be equal to amazon_cart we do copy over everything that was in the amazon_cart list but we our bringing over what is stored in memory. So now when we modify new_cart we are also modifying amazon_cart because it is stored in memory the same
+
+
+# so if we wanted to be able to copy a list and set it to a new variable and not modify the original list when you modify the new one you would do this
+new_cart = amazon_cart[:]
 new_cart[0] = 'gum'
 print(new_cart)
-
-
+print(amazon_cart)
+ #we see that the original list does not get changed when we modify the new list copied from the original
